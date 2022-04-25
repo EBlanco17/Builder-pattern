@@ -7,8 +7,8 @@ class Motor:
         self.combustible = _combustible
 
     def __str__(self):
-        descripcion ='-----------------------------------------\n'
-        descripcion +='Motor:\n'
+        
+        descripcion ='Motor:\n'
         descripcion +=f'Marca: {self.marca} \n '
         descripcion +=f'Cilindraje: {self.cilindraje} cc \n '
         descripcion +=f'Potencia: {self.potencia} hp \n '
@@ -47,7 +47,7 @@ class Radio:
 
     def __str__(self):
         descripcion =f'{self.vehiculo}'
-        descripcion +='-----------------------------------------\n'
+        
         descripcion +='Radio:\n'
         descripcion +=f'Marca: {self.marca} \n'
         descripcion +=f'Lector CD: {self.lectorCD} \n'
@@ -65,7 +65,7 @@ class Llantas:
 
     def __str__(self):
         descripcion =f'{self.vehiculo}'
-        descripcion +='-----------------------------------------\n'
+        
         descripcion +='Llantas:\n'
         descripcion +=f'Rin: {self.rin} \n'
         descripcion +=f'Marca: {self.marca} \n'

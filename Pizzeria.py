@@ -11,7 +11,7 @@ class Pizzeria:
         self.seleccionarTipo()
         
         self.agregarIngrediente()
-        self.calcularQueso()
+        self.calcularQuesoyMasa()
         self.calcularPrecio()
         self.calcularDomicilio()
 
@@ -25,9 +25,9 @@ class Pizzeria:
         else:
             self.Precio = self.Precio
     
-    def calcularQueso(self):
-        tamanios = {'Small':'200gr', 'Medium':'400gr','Large':'600gr'}
-        self.Queso = tamanios[self.Tamanio]
+    def calcularQuesoyMasa(self):
+        tamanios = {'Small':['200gr', '500gr'], 'Medium':['400gr', '700gr'],'Large':['600gr', '900gr']}
+        self.Cantidades = tamanios[self.Tamanio]
 
     def seleccionarTipo(self):
         tipos = {'Hawaiana' : Hawaina, 'Pepperoni': Pepperoni, 'Vegetariana': Vegetariana, 'Mexicana': Mexicana}
@@ -44,7 +44,7 @@ class Pizzeria:
     def verPizzaFinal(self):
         print('-'*30)
         print(" Tamanio: ", self.Tamanio)
-        print(" Queso: ", self.Queso)
+        print(f' Queso: {self.Cantidades[0]} Masa: {self.Cantidades[1]}')
         self.verIngredientes()
         print(f' Tipo: {self.Tipo} \n Ingredientes: {json.dumps(self.Ingredientes,sort_keys=False,indent=4)}')
         print(" Precio: ", self.Precio)
